@@ -23,7 +23,7 @@ var AppView = Backbone.View.extend({
   onCreateButtonClick: function () {
 
     var newToDoModel = new myToDoModel();
-    newToDoModel.set({
+    newToDoModel.save({
       todo: this.$itemName.val()
     });
     this.createToDoCollection.add(newToDoModel);
@@ -34,6 +34,7 @@ var AppView = Backbone.View.extend({
   onToDoAdd: function(newToDoModel) {
     var newToDoView = new ToDoView({model: newToDoModel});
     this.$toDoBoard.append(newToDoView.$el);
+
   }
 });
 
