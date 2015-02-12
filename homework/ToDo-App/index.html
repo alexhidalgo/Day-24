@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Backbone App</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+	<body>
+
+		<container id="app-view">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">
+			    	TODO APP
+			    </h3>
+			  </div>
+
+			  <div class="panel-body col-md-6">
+			  	<div class="list-group" id="todo-board">
+					</div>
+			  </div>
+
+			  <div class="panel-footer">
+				  	<div class="row">
+						  <div class="col-lg-6">
+						    <div class="input-group">
+						      <input type="text" class="form-control" id="item-name"placeholder="Add an item here!">
+						      <span class="input-group-btn">
+						        <button class="btn btn-default" id="create-button" type="button">Create</button>
+						      </span>
+						    </div>
+						  </div>
+						</div>
+				  	</div>
+			</div>
+		</container>
+
+		<!-- These are my templates -->
+		<script type="text/html" id="todo-item-view">
+			<div class="list-group-item list-group-item-success todo-item-text"><%= todo %></div>
+		</script>
+
+		<!-- These are my library files -->
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="bower_components/underscore/underscore-min.js"></script>
+		<script src="bower_components/backbone/backbone.js"></script>
+
+		<!-- These are my model files -->
+		<script src="scripts/views/models/ToDoModel.js"></script>
+
+		<!-- These are my collection files -->
+		<script src="scripts/views/collections/ToDoCollection.js"></script>
+
+		<!-- These are my views -->
+		<script src="scripts/views/MessageView.js"></script>
+		<script src="scripts/views/AppView.js"></script>
+
+		<!-- These are my main files -->
+		<script src="scripts/main.js"></script>
+
+	</body>
+</html>
