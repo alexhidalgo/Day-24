@@ -10,7 +10,9 @@ var ToDoView = Backbone.View.extend({
 		);
 
 		var itemTemplate = _.template($('#todo-item-view').html());
+
 		this.$el = $(itemTemplate(this.model.attributes));
+		// console.log(this.$el);
 
 		this.$strikeText = $('.strike-text');
 

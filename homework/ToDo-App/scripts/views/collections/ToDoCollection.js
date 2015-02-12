@@ -1,3 +1,5 @@
 var myToDoCollection = Backbone.Collection.extend({
-	model: myToDoModel
+	url: 'http://tiny-pizza-server.herokuapp.com/collections/alex-todo-items',
+	model: myToDoModel,
 });
+
