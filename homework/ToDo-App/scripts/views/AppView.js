@@ -26,7 +26,6 @@ var AppView = Backbone.View.extend({
     // this.$toDoBoard.append(fetchItems.$el);
 
     console.log('appview initialize');
-
   },
 
   onCreateButtonClick: function () {
