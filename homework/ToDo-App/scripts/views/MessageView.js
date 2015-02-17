@@ -18,7 +18,7 @@ var ToDoView = Backbone.View.extend({
 
 		this.$el.on('click', this.onTextClick);
 
-		this.model.on('change', this.onModelChanged);
+		this.model.on('change:completed', this.onModelChanged);
 
 	},
 
