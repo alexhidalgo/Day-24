@@ -2,7 +2,6 @@ var AppView = Backbone.View.extend({
   el: '#app-view',
   initialize: function() {
 
-
     _.bindAll(
       this,
       'onCreateButtonClick',
@@ -14,16 +13,10 @@ var AppView = Backbone.View.extend({
     this.$itemName = $('#item-name');
     this.createToDoCollection = new myToDoCollection();
 
-
     this.$createButton.on('click', this.onCreateButtonClick);
     this.createToDoCollection.on('add', this.onToDoAdd);
 
     this.createToDoCollection.fetch();
-
-
-    // var fetchItems = new ToDoView();
-    // this.fetchItems.fetch();
-    // this.$toDoBoard.append(fetchItems.$el);
 
     console.log('appview initialize');
   },
@@ -36,16 +29,6 @@ var AppView = Backbone.View.extend({
     });
     this.createToDoCollection.add(newToDoModel);
     this.$itemName.val('');
-
-    // var newToDoModel = new myToDoModel({
-    //   todo: this.$itemName.val()
-    // });
-    // this.createToDoCollection.add(newToDoModel);
-    // newToDoModel.save();
-    // newToDoModel.on('sync', function(model) {
-    //   console.log(model);
-    // });
-
   },
 
 
